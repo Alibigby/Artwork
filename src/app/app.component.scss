@@ -1,0 +1,20 @@
+// * {
+//   /* Center and scale the image nicely */
+//   height: 100%;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   // overflow: hidden;
+// }
+
+.backGround {
+  /* The image used */
+
+  /* Full height */
+  height: auto;
+  min-height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
