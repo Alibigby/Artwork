@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DataService } from '../app/service/data.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../material.module';
@@ -8,13 +8,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
-import { MatIconModule } from '@angular/material/icon';
+import { FavoritesComponent } from './favorites/favorites.component'
 
 
+const routes: Routes = [
+
+  
+]
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,11 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot([
+      {path: 'favourites', component: FavoritesComponent},
+      {path: '', component: LandingPageComponent},
+    ]),
   ],
 
   providers: [DataService],
