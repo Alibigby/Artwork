@@ -1,52 +1,69 @@
 <nav class="sidebar-navigation">
-	<ul>
-        <li class="active">
-            <i class="fa fa-share-alt">
-                <button class="button-size" routerLink="/favourites">
-        <span class="material-icons">
-          home
-          </span>
+  <ul>
+    <li class="active">
+      <i class="fa fa-share-alt">
+        <button class="button-size" routerLink="/favourites">
+          <span class="material-icons"> home </span>
         </button>
-        </i>
-    </li>
-		<li>
-      <button class="button-size" routerLink="/favourites">
-			<i class="fa fa-hdd-o"></i>
-      <span class="material-icons">
-        add_circle_outline
-        </span>
-      </button>
-    </li>
-		<li>
-      <button class="button-size" routerLink="/favourites">
-			<i class="fa fa-newspaper-o"></i>
-      <span class="material-icons">face</span>
-      </button>
-		</li>
-		<li>
-      <button class="button-size" routerLink="/favourites">
-			<i class="fa fa-print"></i>
-      <span class="material-icons">
-        favorite_border
-        </span>
-      </button>
-    </li>
-		<li>
-      <button class="button-size" routerLink="/favourites">
-			<i class="fa fa-sliders"></i>
-      <span class="material-icons">
-        settings
-        </span>
-        </button>
+      </i>
     </li>
     <li>
-    <button class="button-size" routerLink="/favourites">
-    <span class="material-icons">
-      logout
-      </span>
-    </button>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-hdd-o"></i>
+        <span class="material-icons"> add_circle_outline </span>
+      </button>
     </li>
-	</ul>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-newspaper-o"></i>
+        <span class="material-icons">face</span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-print"></i>
+        <span class="material-icons"> favorite_border </span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-sliders"></i>
+        <span class="material-icons"> settings </span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <span class="material-icons"> logout </span>
+      </button>
+    </li>
+  </ul>
 </nav>
-<p>favorites works!</p>
-<h1>helllllllllllllllllllloooooooooooooooooo</h1>
+<!-- <div *ngFor="let datus of dataService.getFavouriteData | async">
+  <h3> {{datus.title}} </h3>
+  <p> {{datus.content}} </p>
+</div> -->
+
+<div class="gallery__item--1">
+  <mat-card class="example-card" *ngFor="let datus of dataService.getFavouriteData | async">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ datus.title }}</mat-card-title>
+      <mat-card-subtitle>{{ datus.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../../../assets/img/thumb-1920-556869.jpg"
+      alt="Photo of a Shiba Inu"
+    />
+
+    <mat-card-content>
+      <p>
+        {{ datus.content }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button mat-button (click)="addToFavourite(datus)">LIKE</button> -->
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

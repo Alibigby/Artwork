@@ -9,6 +9,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 import { FavoritesComponent } from './favorites/favorites.component'
+import { CommonModule } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 const routes: Routes = [
@@ -18,7 +21,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
     RouterModule.forRoot([
       {path: 'favourites', component: FavoritesComponent},
       {path: '', component: LandingPageComponent},

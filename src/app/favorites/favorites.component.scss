@@ -139,7 +139,6 @@ $tooltip-background-color: $sidebar-background-color;
 }
 
 .example-header-image {
-//   background-image: url('../../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg');
   background-image: url('../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg');
   background-size: cover;
 }
@@ -156,6 +155,6 @@ $tooltip-background-color: $sidebar-background-color;
     display: block;
     height: 50px;
     width: 80px;
-	color: white;
+	  color: white;
     cursor: pointer;
 }
