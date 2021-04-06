@@ -11,6 +11,8 @@ import { LandingPageComponent } from './landing-page/landing-page/landing-page.c
 import { FavoritesComponent } from './favorites/favorites.component'
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { AddItemComponent } from './add-item/add-item.component';
+
 
 
 
@@ -22,7 +24,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LandingPageComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'favourites', component: FavoritesComponent},
+      {path: 'addItem', component: AddItemComponent},
       {path: '', component: LandingPageComponent},
     ]),
   ],
