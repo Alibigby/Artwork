@@ -1,0 +1,32 @@
+<div class="center">
+<mat-card>
+  <h2>
+    Add Item
+  </h2>
+<form class="first-field" [formGroup]="addItemForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Url</mat-label>
+    <input matInput formControlName="url">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Content</mat-label>
+    <input matInput formControlName="content">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>description</mat-label>
+    <input matInput required formControlName="description">
+  </mat-form-field>
+
+</form>
+<!-- <div *ngIf="let datus"> -->
+<button (click)="additem()" mat-button color="primary">
+  <mat-icon>add</mat-icon>
+  Add Item
+</button>
+<!-- </div> -->
+</mat-card>
+</div>

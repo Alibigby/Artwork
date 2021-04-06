@@ -23,7 +23,5 @@ export class LandingPageComponent implements OnInit {
   addToFavourite(datus) {
     this.favourites.push(datus)
     this.dataService.setFavouriteData = this.favourites;
-    console.log(this.dataService.getFavouriteData);
-    console.log(this.favourites);
   }
 }
