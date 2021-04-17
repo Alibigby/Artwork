@@ -7,10 +7,6 @@ p {
     margin-bottom: 50px;
   }
 
-//   mat-form-field {
-//       width: 25%;
-//   }
-
 .center {
     margin: auto;
     height: 60%;
@@ -21,10 +17,160 @@ p {
 
   .first-field {
     display: grid;
-    // padding-right: 10px;
   }
 
-  // .second-field {
-  //   display: grid;
-  //   // grid-column: auto;
-  // }
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Lato', sans-serif;
+	line-height: 1;
+}
+
+body {
+	background-color: #F5F6F8;
+	overflow: hidden;
+}
+
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+//Color Variables
+$sidebar-background-color: #313443;
+$active-sidebar-link-color: #22252E;
+$hover-sidebar-link-color: $active-sidebar-link-color;
+$active-link-color: #98D7EC;
+$tooltip-background-color: $sidebar-background-color;
+
+.sidebar-navigation {
+	display: inline-block;
+	min-height: 100vh;
+	width: 80px;
+	right: 0;
+	position: fixed;
+	background-color: $sidebar-background-color;
+	
+	ul {
+		text-align: center;
+		color: white;
+		
+		li {
+			padding: 28px 0;
+			cursor: pointer;
+			transition: all ease-out 120ms;
+			
+			i {
+				display: block;
+				font-size: 24px;
+
+				transition: all ease 450ms;
+			}
+			
+			.tooltip {
+				display: inline-block;
+				background-color: $tooltip-background-color;
+				padding: 6px 6px;
+				border-radius: 10px;
+				margin-bottom: -10px;
+				right: 3px;
+				opacity: 0;
+				visibility: hidden;
+				font-size: 13px;
+				letter-spacing: .5px;
+				
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					left: -4px;
+					top: 10px;
+					transform: rotate(45deg);
+					width: 10px;
+					height: 10px;
+					background-color: inherit;
+				}
+			}
+			
+			&:hover {
+				background-color: $hover-sidebar-link-color;
+				
+				.tooltip {
+					visibility: visible;
+					opacity: 1;
+				}
+				left: 10px;
+			}
+			
+			&.active {
+				background-color: $active-sidebar-link-color;
+				
+				i {
+					color: $active-link-color;
+				}
+			}			
+		}
+	}
+}
+
+.example-card {
+	display: grid;
+	max-width: 400px;
+	margin: auto;
+	width: 50%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	right: 15px;
+}
+
+
+.gallery__item--1 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));
+}
+
+.button-size {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    height: 50px;
+    width: 80px;
+	color: white;
+    cursor: pointer;
+}

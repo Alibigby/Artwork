@@ -1,32 +1,70 @@
-<div class="center">
-<mat-card>
-  <h2>
-    Add Item
-  </h2>
-<form class="first-field" [formGroup]="addItemForm">
-  <mat-form-field appearance="outline">
-    <mat-label>Title</mat-label>
-    <input matInput formControlName="title">
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Url</mat-label>
-    <input matInput formControlName="url">
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Content</mat-label>
-    <input matInput formControlName="content">
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>description</mat-label>
-    <input matInput required formControlName="description">
-  </mat-form-field>
+<nav class="sidebar-navigation">
+  <ul>
+    <li class="active">
+      <i class="fa fa-share-alt">
+        <button class="button-size" routerLink="/">
+          <span class="material-icons"> home </span>
+        </button>
+      </i>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-hdd-o"></i>
+        <span class="material-icons"> add_circle_outline </span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-newspaper-o"></i>
+        <span class="material-icons">face</span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-print"></i>
+        <span class="material-icons"> favorite_border </span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <i class="fa fa-sliders"></i>
+        <span class="material-icons"> settings </span>
+      </button>
+    </li>
+    <li>
+      <button class="button-size" routerLink="/favourites">
+        <span class="material-icons"> logout </span>
+      </button>
+    </li>
+  </ul>
+</nav>
 
-</form>
-<!-- <div *ngIf="let datus"> -->
-<button (click)="additem()" mat-button color="primary">
-  <mat-icon>add</mat-icon>
-  Add Item
-</button>
-<!-- </div> -->
-</mat-card>
+<div class="center">
+  <mat-card>
+    <h2>Add Item</h2>
+    <form class="first-field" [formGroup]="addItemForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Url</mat-label>
+        <input matInput formControlName="url" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Content</mat-label>
+        <input matInput formControlName="content" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>description</mat-label>
+        <input matInput required formControlName="description" />
+      </mat-form-field>
+    </form>
+    <!-- <div *ngIf="let datus"> -->
+    <button (click)="additem()" mat-button color="primary">
+      <mat-icon>add</mat-icon>
+      Add Item
+    </button>
+    <!-- </div> -->
+  </mat-card>
 </div>

@@ -8,18 +8,9 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  // favouriteList = [];
-
   constructor(public dataService: DataService) {}
 
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
-    // this.dataService.getFavouriteData.subscribe((value => {
-    //   this.favouriteList = value;
-    //   console.log(value);
-    // }));
-    // console.log(this.favouriteList);  
-  }
 }

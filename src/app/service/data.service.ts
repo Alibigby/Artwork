@@ -12,42 +12,42 @@ export class DataService {
   constructor() {
     this.data$ = new BehaviorSubject<Data[]>([
       {
-        // ID: 0,
+        ID: 0,
         title: 'Title1',
         description: 'Description',
         content: 'Content here',
         url: '../../../assets/img/thumb-1920-556869.jpg',
       },
       {
-        // ID: 1,
+        ID: 1,
         title: 'Title2',
         description: 'Description',
         content: 'Content here',
         url: '../../../assets/img/thumb-1920-556869.jpg',
       },
       {
-        // ID: 2,
+        ID: 2,
         title: 'Title3',
         description: 'Description',
         content: 'Content here',
         url: '../../../assets/img/thumb-1920-556869.jpg',
       },
       {
-        // ID: 3,
+        ID: 3,
         title: 'Title4',
         description: 'Description',
         content: 'Content here',
         url: '../../../assets/img/thumb-1920-556869.jpg',
       },
       {
-        // ID: 4,
+        ID: 4,
         title: 'Title5',
         description: 'Description',
         content: 'Content here',
         url: '../../../assets/img/thumb-1920-556869.jpg',
       },
       {
-        // ID: 5,
+        ID: 5,
         title: 'Title6',
         description: 'Description',
         content: 'Content here',
@@ -56,6 +56,7 @@ export class DataService {
     ]);
     this.favouriteData$ = new BehaviorSubject<Data[]>([]);
   }
+
   public set setData(value: Data[]) {
     this.data$.next(value);
   }

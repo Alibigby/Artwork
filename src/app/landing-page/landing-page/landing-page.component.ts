@@ -15,13 +15,15 @@ export class LandingPageComponent implements OnInit {
     this.dataService.data$.subscribe((value) => {
       this.data = value;
     });
-    console.log(this.data);
   }
 
   favourites = [];
 
   addToFavourite(datus) {
-    this.favourites.push(datus)
+    this.favourites.push(datus);
     this.dataService.setFavouriteData = this.favourites;
+  }
+  deleteItem(i: number): void {
+    this.data.splice(i,1);
   }
 }
