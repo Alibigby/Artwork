@@ -12,6 +12,7 @@ import { FavoritesComponent } from './favorites/favorites.component'
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AddItemComponent } from './add-item/add-item.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -25,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     LandingPageComponent,
     FavoritesComponent,
-    AddItemComponent
+    AddItemComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ const routes: Routes = [
     RouterModule.forRoot([
       {path: 'favourites', component: FavoritesComponent},
       {path: 'addItem', component: AddItemComponent},
+      {path: 'register', component: RegisterComponent},
       {path: '', component: LandingPageComponent},
     ]),
   ],
