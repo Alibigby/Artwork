@@ -29,6 +29,8 @@ import { CdkTableModule } from "@angular/cdk/table";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   imports: [
@@ -63,7 +65,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatSnackBarModule,
     MatBadgeModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatStepperModule
   ],
   exports: [
     BidiModule,
@@ -97,7 +100,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatSnackBarModule,
     MatBadgeModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatStepperModule
   ],
   declarations: [],
 })

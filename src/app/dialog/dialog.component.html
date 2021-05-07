@@ -1,0 +1,56 @@
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="lotInfo">
+    <form [formGroup]="lotInfo">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Your Mobile Number</mat-label>
+        <input
+          matInput
+          formControlName="mobileNumberCtrl"
+          placeholder="+989000000"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Your Address</mat-label>
+        <input
+          matInput
+          formControlName="AddressCtrl"
+          placeholder="Ex. 1 Main St, New York, NY"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="email">
+    <form [formGroup]="email">
+      <ng-template matStepLabel>Fill out your email</ng-template>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="emailCtrl"
+          placeholder="Test@Test.com"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <mat-card class="example-card">
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+          <button mat-button (click)="onSubmit()">Done</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-card>
+  </mat-step>
+</mat-horizontal-stepper>

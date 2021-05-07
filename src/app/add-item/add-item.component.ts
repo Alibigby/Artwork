@@ -24,6 +24,8 @@ export class AddItemComponent implements OnInit {
     }
 
     additem() {
-        this.dataService.data$.next([...this.dataService.data$.value,this.addItemForm.value]);
+        this.dataService.data$.next([
+        ...this.dataService.data$.value,
+        this.addItemForm.value]);
     }
 }

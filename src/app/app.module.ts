@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AddItemComponent } from './add-item/add-item.component';
 import { RegisterComponent } from './register/register.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
@@ -27,7 +28,8 @@ const routes: Routes = [
     LandingPageComponent,
     FavoritesComponent,
     AddItemComponent,
-    RegisterComponent
+    RegisterComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

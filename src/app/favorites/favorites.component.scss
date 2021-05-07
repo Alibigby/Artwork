@@ -126,8 +126,18 @@ $tooltip-background-color: $sidebar-background-color;
 }
 
 .example-card {
-  max-width: 300px;
-  margin: 4px;
+  display: grid;
+  max-width: 400px;
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  right: 15px;
+}
+
+.mat-card-image {
+  min-inline-size: 110%;
+  max-inline-size: 120%;
 }
 
 .example-header-image {
