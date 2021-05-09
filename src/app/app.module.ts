@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AddItemComponent } from './add-item/add-item.component';
 import { RegisterComponent } from './register/register.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
     FavoritesComponent,
     AddItemComponent,
     RegisterComponent,
-    DialogComponent
+    DialogComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

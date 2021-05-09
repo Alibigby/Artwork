@@ -1,42 +1,4 @@
 <div class="container">
-  <nav class="sidebar-navigation">
-    <ul>
-      <li class="active">
-        <i class="fa fa-share-alt">
-          <span class="material-icons"> home </span>
-        </i>
-      </li>
-      <li>
-        <button class="button-size" routerLink="/addItem">
-          <i class="fa fa-hdd-o"></i>
-          <span class="material-icons"> add_circle_outline </span>
-        </button>
-      </li>
-      <li>
-        <button class="button-size" routerLink="/register">
-          <i class="fa fa-newspaper-o"></i>
-          <span class="material-icons">face</span>
-        </button>
-      </li>
-      <li>
-        <button class="button-size" routerLink="/favourites">
-          <i class="fa fa-print"></i>
-          <span class="material-icons">favorite_border</span>
-        </button>
-      </li>
-      <li>
-        <button class="button-size" routerLink="/favourites">
-          <i class="fa fa-sliders"></i>
-          <span class="material-icons"> settings </span>
-        </button>
-      </li>
-      <li>
-        <button class="button-size" routerLink="/favourites">
-          <span class="material-icons"> logout </span>
-        </button>
-      </li>
-    </ul>
-  </nav>
   <div class="gallery__item--1">
     <mat-card class="example-card" *ngFor="let datus of data; let i = index">
       <mat-card-header>
