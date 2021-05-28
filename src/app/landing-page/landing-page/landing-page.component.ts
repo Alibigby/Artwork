@@ -12,11 +12,17 @@ import { DataService } from 'src/app/service/data.service';
 export class LandingPageComponent implements OnInit {
 
   data = [];
+  person = [];
 
   constructor(private dataService: DataService,
     public dialogRef:MatDialog) {}
 
   ngOnInit() {
+    this.dataService.person$.subscribe((value) => {
+      this.person = value;
+      console.log(123);
+    });
+
     this.dataService.data$.subscribe((value) => {
       this.data = value;
     });

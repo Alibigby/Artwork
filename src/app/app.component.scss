@@ -1,15 +1,11 @@
 .backGround {
   /* The image used */
-
-  /* Full height */
-  height: auto;
-  min-height: 100%;
-  /* Center and scale the image nicely */
+  background-image: url('../assets/img/the-last-of-us-part-2-minimalist-a55235.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-button {
-  position: static;
+  overflow: auto;
+  min-height: 100%;
 }

@@ -1,9 +1,9 @@
 <div class="center">
   <mat-card class="example-card">
     <h2>Register</h2>
-    <form class="first-field" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form class="first-field" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <mat-form-field class="username" appearance="outline">
-        <mat-label>username</mat-label>
+        <mat-label>email</mat-label>
         <input matInput formControlName="username"/>
       </mat-form-field>
       <mat-form-field class="password" appearance="outline">

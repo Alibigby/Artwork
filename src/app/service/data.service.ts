@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Data } from './data.model';
+import { Data, Section } from './data.model';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class DataService {
   public data$: BehaviorSubject<Data[]>;
+  public person$: BehaviorSubject<Section[]>;
   public favouriteData$: BehaviorSubject<Data[]>;
 
   constructor() {
@@ -54,6 +56,22 @@ export class DataService {
         url: '../../../assets/img/1yjub8t03nx61.jpg',
       },
     ]);
+
+    this.person$ = new BehaviorSubject<Section[]>([
+      {
+        name: 'Photos',
+        updated: new Date('1/1/16'),
+      },
+      {
+        name: 'Recipes',
+        updated: new Date('1/17/16'),
+      },
+      {
+        name: 'Work',
+        updated: new Date('1/28/16'),
+      }
+    ]);
+    
     this.favouriteData$ = new BehaviorSubject<Data[]>([]);
   }
 

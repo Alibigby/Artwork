@@ -2,13 +2,11 @@
   <mat-card>
     <h2>Add Item</h2>
     <form class="first-field" [formGroup]="addItemForm">
+        <mat-label>url</mat-label>
+        <input type="file" formControlName="url" (change)="onSelectFile($event)" />
       <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
         <input matInput formControlName="title" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Url</mat-label>
-        <input matInput formControlName="url" />
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Content</mat-label>
@@ -26,4 +24,8 @@
     </button>
     <!-- </div> -->
   </mat-card>
+  <!-- <br>
+  <mat-card>
+      <input type="file" (change)="onSelectFile($event)" />
+  </mat-card> -->
 </div>

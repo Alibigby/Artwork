@@ -1,35 +1,41 @@
-.example-card {
-  display: grid;
-  max-width: 400px;
-  margin: auto;
-  width: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  right: 15px;
-}
 
-.mat-card-image {
-  min-inline-size: 110%;
-  max-inline-size: 120%;
+.example-card {
+	display: grid;
+	position: static;
+	max-width: 400px;
+	margin: auto;
+	width: 50%;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	right: 15px;
 }
 
 .example-header-image {
-  background-image: url("../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg");
+  // background-image: url('../../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg');
+  background-image: url('../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg');
   background-size: cover;
 }
 
+.mat-card-image {
+	max-height: 270px;
+	margin: 10px 0px 0px -16px;
+}
+
 .gallery__item--1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));
 }
 
 .button-size {
-  background: transparent;
-  border: none;
-  outline: none;
-  display: block;
-  height: 50px;
-  width: 80px;
-  color: white;
-  cursor: pointer;
+	background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    height: 50px;
+    width: 80px;
+	color: white;
+    cursor: pointer;
 }
+button {
+	position: static;
+  }

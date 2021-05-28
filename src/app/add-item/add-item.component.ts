@@ -10,16 +10,18 @@ import { DataService } from "../service/data.service";
 export class AddItemComponent implements OnInit {
 
     addItemForm:FormGroup;
+    url = '';
 
-    constructor(public fb: FormBuilder,public dataService: DataService) {
-    }
+    constructor(public fb: FormBuilder,public dataService: DataService) {}
+
+        
 
     ngOnInit(): void {
        this.addItemForm = this.fb.group({
             description: [""],
             title: [""],
             content: [""],
-            url: [""],
+            url: this.url,
         })
     }
 
@@ -28,4 +30,17 @@ export class AddItemComponent implements OnInit {
         ...this.dataService.data$.value,
         this.addItemForm.value]);
     }
+
+    onSelectFile(event) {
+        if (event.target.files && event.target.files[0]) {
+          var reader = new FileReader();
+    
+          reader.readAsDataURL(event.target.files[0]);
+    
+          reader.onload = (event) => {
+            this.url = event.target.result as string;
+            
+          }
+        }
+      }
 }

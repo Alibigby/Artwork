@@ -12,4 +12,11 @@ export class Data {
         this.content = content;;
         this.url = url;
     }
+    
 }
+
+
+export class Section {
+    name: string;
+    updated: Date;
+  }
