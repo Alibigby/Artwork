@@ -43,6 +43,11 @@ code {
 	padding: 0;
 }
 
+.layer {
+	z-index: 1000;
+	position: absolute;
+}
+
 .links {
 	background-color: #123;
 	background-image: linear-gradient(to bottom, #0003, transparent);
@@ -50,9 +55,6 @@ code {
 	box-shadow: 0 0 32px #0003;
 	font-size: 25px;
 	font-weight: 250;
-	margin: 10px;
-    left: 6%;
-    width: 86%;
 }
 .links > a {
 	color: #9ab;

@@ -1,23 +1,117 @@
 
 .example-card {
-	display: grid;
-	position: static;
-	max-width: 400px;
-	margin: auto;
-	width: 50%;
-	margin-top: 100px;
-	margin-bottom: 10px;
-	right: 15px;
+    display: grid;
+    margin: auto;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: -1px;
 }
+
+.mat-list-icon {
+	color: rgba(0, 0, 0, 0.54);
+  }
+  
 
 .example-header-image {
   background-image: url('../../../assets/img/people/f9ced01bc32bd929e576552a8c40fd1c.jpg');
   background-size: cover;
 }
 
-.gallery__item--1 {
-	display: grid;
+.container {
+	padding-left: 40px;
+}
+
+.mat-card-header-text {
+    margin: 6px 16px 7px 95px;
+}
+
+.mat-card-image {
+	height: auto;
+    width: 100%;
+	min-width: auto;
+    max-height: 456px;
+    margin: 10px 0px 0px -16px;
+	padding-left: 15px;
+}
+
+.mat-list-base .mat-list-item .mat-list-avatar, .mat-list-base .mat-list-option .mat-list-avatar {
+    flex-shrink: 0;
+    width: 40px;
+    width: 40%;
+    height: 1% !important;
+    float: left;
+    height: 40px;
+    border-radius: 38%;
+    object-fit: cover;
+    margin-top: 45px;
+}
+
+.contents {
+	transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 	grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));
+	margin: auto;
+	width: 60%;
+	border: 3px solid #73AD21;
+	padding: 10px;
+	position: relative;
+    padding: 16px;
+    margin-top: 150px;
+    inline-size: 145%;
+    /* top: 50%; */
+    left: 20%;
+	border-radius: 4px;
+}
+
+.contacts {
+	padding-left: 1px;
+}
+
+.Follow {
+    float: right;
+    margin-right: 100px;
+    padding-right: 9%;
+    display: inline;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+  .persons {
+    float: right;
+    margin: 1%;
+    width: 50%;
+  }
+
+  .content {
+      float: right;
+  }
+
+.mat-calendar {
+    /* display: block; */
+    display: grid;
+    padding: 30px;
+    float: right;
+    background-color: azure;
+}
+
+.gallery__item--1 {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    margin: auto;
+    width: 550px;
+    border: 3px solid rgb(0 0 0 / 53%);
+    padding: 8px;
+    margin: 10px;
+    margin-left: 4%;
+
+	@media only screen and (max-width: 600px) {
+		.gallery__item--1  {
+			width: 55%;
+		}
+	}
 }
 
 .button-size {
